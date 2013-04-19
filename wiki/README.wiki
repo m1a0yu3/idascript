@@ -18,14 +18,6 @@ On Linux/OSX platforms, idascript will be installed the first directory listed i
 
 On Windows, idascript will be placed in the specified IDA install directory.
 
-= Usage =
-
-IDAScript usage is very straight forward:
-
-{{{
-$ idascript ./target.bin ./myscript.py
-}}}
-
 = Scripts =
 
 All IDAPython scripts intended for use with IDAScript must import the idascript Python module. If you want IDA to exit when the script is finished, the script must also call idascript.exit when done. Example:
@@ -39,3 +31,11 @@ idascript.exit()
 }}}
 
 Scripts written in this manner can be used either through idascript utility or manually from inside the IDA GUI. The idascript module will detect when it is not being run via the idascript utility and will disable itself.
+
+= Usage =
+
+IDAScript usage is very straight forward:
+
+{{{
+$ idascript ./target.bin ./myscript.py arg1 arg2 arg3
+}}}
